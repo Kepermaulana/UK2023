@@ -6,9 +6,10 @@
             <div class="card shadow">
                 <div class="card-body">
                     <div class="card-body">
-                        <form action="{{route('masyarakat.login')}}" method="POST">
+                        <form action="" method="POST">
                             @csrf
                             <h3 class="text-center mb-3">Aplikasi Pengaduan Masyarakat</h3>
+                            <p class=" font-weight-bold text-center">Petugas</p>
                             <div class="form-group">
                              <label for="username">Username</label>
                              <input type="text" name="username" id="" class="form-control">

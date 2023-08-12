@@ -9,7 +9,7 @@
             <a href="/pengaduan" class="nav-link text-white">Buat Laporan</a>
             <a href="/laporanku" class="nav-link text-white">Laporanku</a>
             <!-- fitur logout -->
-            <!-- <a href="/logout" class="nav-link text-white">Logout</a> -->
+            <a href="/logout" class="nav-link text-white">Logout</a>
             <li class="nav-item-dropdown">
                 <a href="#" class="nav-link text-white dropdown-toggle active" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Namaku</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

@@ -24,4 +24,9 @@ class RegisterController extends Controller
         $data_masyarakat->save();
         return redirect()->to('/register')->with('success', 'Data Masyarakat Sukses Ditambahkan!');
     }
+
+    public function RegisterFormAdmin()
+    {
+        return view('admin.auth.register');
+    }
 }
