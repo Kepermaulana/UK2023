@@ -13,6 +13,6 @@ class Pengaduan extends Model
 
     public function masyarakat()
     {
-        return $this->belongsTo('App\Models\Masyarakat', 'foreign_key', 'local_key');
+        return $this->belongsTo(Masyarakat::class);
     }
 }

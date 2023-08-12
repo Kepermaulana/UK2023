@@ -15,7 +15,7 @@
                         <h3 class="text-center mb-3">Tambah Pengaduan </h3>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('masyarakat.pengaduan') }}" method="POST">
+                        <form action="{{ route('masyarakat.pengaduan') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="tanggal_pengaduan">Tanggal Pengaduan</label>
@@ -23,7 +23,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="masyarakat_nik">Masyarakat NIK</label>
-                                <input type="text" name="masyarakat_nik" value="{{Auth()->guard('masyarakat')->user()->nama}}" id="" class="form-control">
+                                <input type="text" name="masyarakat_nik" value="{{Auth()->guard('masyarakat')->user()->nik}}" id="" class="form-control" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="isi_laporan">Isi Laporan</label>

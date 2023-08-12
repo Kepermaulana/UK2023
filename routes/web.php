@@ -21,14 +21,24 @@ Route::get('/', 'App\Http\Controllers\MasyarakatController@index')->name('masyar
 
 //Register
 Route::get('/register', 'App\Http\Controllers\Auth\RegisterController@RegisterFormMasyarakat');
+Route::get('/admin/register', 'App\Http\Controllers\Auth\RegisterController@RegisterFormAdmin');
 Route::post('/register/store', 'App\Http\Controllers\Auth\RegisterController@RegisterMasyrakat')->name('masyarakat.register');
+
 //Login
 Route::get('login', 'App\Http\Controllers\Auth\LoginController@FormLoginMasyarakat');
 Route::post('login', 'App\Http\Controllers\Auth\LoginController@LoginMasyarakat')->name('masyarakat.login');
+Route::get('/petugas/login', 'App\Http\Controllers\Auth\LoginController@FormLoginPetugas');
+Route::get('/petugas/login/post', 'App\Http\Controllers\Auth\LoginController@LoginPetugas')->name('petugas.login');
+
+
 
 Route::middleware('masyarakat')->group(function(){
     Route::get('/pengaduan', 'App\Http\Controllers\MasyarakatController@FormPengaduan');
     Route::match(['get', 'post'],'/pengaduan/simpan', 'App\Http\Controllers\MasyarakatController@simpanPengaduan')->name('masyarakat.pengaduan');
     Route::get('/laporanku', 'App\Http\Controllers\MasyarakatController@laporanku');
     Route::get('/logout', 'App\Http\Controllers\MasyarakatController@logout');
+});
+
+Route::middleware('petugas')->group(function(){
+
 });

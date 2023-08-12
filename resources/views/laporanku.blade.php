@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <p>{{$pengaduan->tanggal_pengaduan}}</p>
                     <p>{{$pengaduan->isi_laporan}}</p>
-                    <p>{{$pengaduan->foto}}</p>
+                    <p><img src="{{ asset('/images/'.$pengaduan->foto) }}" alt=""></p>
                     <p>{{$pengaduan->status}}</p>
                 </div>
             </div>
