@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('petugas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_petugas');            
-            $table->string('username');            
+            $table->string('username')->unique();            
             $table->string('password');            
             $table->string('telp');            
             $table->enum('level', ['petugas','admin']);            

@@ -22,7 +22,7 @@
                             </div>
                             <hr>
                             <div class="form-group text-center">
-                                <a href="/login">Registrasi</a>
+                                <a href="/register">Registrasi</a>
                             </div>
                         </form>
                     </div>

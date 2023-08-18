@@ -22,11 +22,12 @@ Route::get('/', 'App\Http\Controllers\MasyarakatController@index')->name('masyar
 //Register
 Route::get('/register', 'App\Http\Controllers\Auth\RegisterController@RegisterFormMasyarakat');
 Route::get('/admin/register', 'App\Http\Controllers\Auth\RegisterController@RegisterFormAdmin');
-Route::post('/register/store', 'App\Http\Controllers\Auth\RegisterController@RegisterMasyrakat')->name('masyarakat.register');
+Route::post('/register/store', 'App\Http\Controllers\Auth\RegisterController@RegisterMasyarakat')->name('masyarakat.register');
+Route::post('/register/store/admin', 'App\Http\Controllers\Auth\RegisterController@RegisterAdmin')->name('admin.register');
 
 //Login
-Route::get('login', 'App\Http\Controllers\Auth\LoginController@FormLoginMasyarakat');
-Route::post('login', 'App\Http\Controllers\Auth\LoginController@LoginMasyarakat')->name('masyarakat.login');
+Route::get('/login', 'App\Http\Controllers\Auth\LoginController@FormLoginMasyarakat');
+Route::post('/login', 'App\Http\Controllers\Auth\LoginController@LoginMasyarakat')->name('masyarakat.login');
 Route::get('/petugas/login', 'App\Http\Controllers\Auth\LoginController@FormLoginPetugas');
 Route::get('/petugas/login/post', 'App\Http\Controllers\Auth\LoginController@LoginPetugas')->name('petugas.login');
 
